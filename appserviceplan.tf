@@ -3,7 +3,7 @@ resource "azurerm_service_plan" "frontend-asp" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   os_type             = "Linux"
-  sku_name            = "P1v2"   # Upgrade to a SKU that supports Availability Zones
+  sku_name            = "P1v2"   # Premium app service plan sku supports Availability Zones
   zone_balancing_enabled = true  # Enable zone redundancy
   per_site_scaling    = false
 
@@ -17,7 +17,7 @@ resource "azurerm_service_plan" "backend-asp" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   os_type             = "Linux"
-  sku_name            = "P1v2"   # premium app service plan sku supports Availability Zones
+  sku_name            = "P1v2"   # Premium app service plan sku supports Availability Zones
   zone_balancing_enabled = true  # Enable zone redundancy
   per_site_scaling    = false
 
