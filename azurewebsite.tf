@@ -28,7 +28,7 @@ resource "azurerm_linux_web_app" "frontend-webapp" {
 
 
   depends_on = [
-    azurerm_service_plan.fe-asp, azurerm_application_insights.fg-appinsights
+    azurerm_service_plan.frontend-asp, azurerm_application_insights.fg-appinsights
   ]
 }
 
