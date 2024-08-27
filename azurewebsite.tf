@@ -15,15 +15,17 @@ resource "azurerm_linux_web_app" "frontend-webapp" {
     }
   }
 
+#App Settings for Application insight
   app_settings = {                #A map of key-value pairs of App Settings
 
-    "APPINSIGHTS_INSTRUMENTATIONKEY"             = azurerm_application_insights.fg-appinsights.instrumentation_key
-    "APPINSIGHTS_PROFILERFEATURE_VERSION"        = "1.0.0"
-    "ApplicationInsightsAgent_EXTENSION_VERSION" = "~2"
-  }
+    "APPINSIGHTS_INSTRUMENTATIONKEY"             = azurerm_application_insights.fg-appinsights.instrumentation_key    # Connecting the app to Application insights
+    "APPINSIGHTS_PROFILERFEATURE_VERSION"        = "1.0.0"                                                            # Profiler to identify code that slowed down web app
+    "ApplicationInsightsAgent_EXTENSION_VERSION" = "~3"                                                               # Insight agent that collects telemetry, version 3
+  } 
 
+#Allows the web app to use other azure services without needing to manage credentials (long version for github, short for actual code)
   identity {
-    type = "SystemAssigned"
+    type = "SystemAssigned"          #The identity is only valid for the lifespan of the resource
   }
 
 
@@ -51,12 +53,12 @@ resource "azurerm_linux_function_app" "backend-fnapp" {
   storage_account_access_key = azurerm_storage_account.fn-storageaccount.primary_access_key
   service_plan_id            = azurerm_service_plan.be-asp.id
 
-
+#App Settings for Application insight
   app_settings = {               #A map of key-value pairs of App Settings   
 
-    "APPINSIGHTS_INSTRUMENTATIONKEY"             = azurerm_application_insights.fg-appinsights.instrumentation_key
-    "APPINSIGHTS_PROFILERFEATURE_VERSION"        = "1.0.0"
-    "ApplicationInsightsAgent_EXTENSION_VERSION" = "~2"
+    "APPINSIGHTS_INSTRUMENTATIONKEY"             = azurerm_application_insights.fg-appinsights.instrumentation_key      # Connecting the app to Application insights
+    "APPINSIGHTS_PROFILERFEATURE_VERSION"        = "1.0.0"                                                              # Profiler to identify code that slowed down web app
+    "ApplicationInsightsAgent_EXTENSION_VERSION" = "~3"                                                                 # Insight agent that collects telemetry, version 3
 
 
   }
