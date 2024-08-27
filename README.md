@@ -6,6 +6,12 @@ Azure Key Vault will be used for secrets management.
 Azure Storage Account will is used for state storage. 
 Application Insights is used for monitoring. 
 
+# Explaining the Terraform Codes
+
+Provider - 
+
+
+
 #Things to consider
 Looking to explore Azure App Service autoscaling plans to automatically adjust resource allocation based on traffic.
 Looking to Implement Azure Application Gateway or Load Balancer to distribute traffic across multiple instances of my app services.
