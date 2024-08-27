@@ -8,14 +8,14 @@ resource "azurerm_linux_web_app" "frontend-webapp" {
   https_only          = true
   site_config {
     minimum_tls_version = "1.2"
-    always_on           = true
+    always_on           = true    # Must only be false when using free or shared service plans
 
     application_stack {
-      node_version = "20-lts"
+      node_version = "20-lts"     # Version 20 long term support
     }
   }
 
-  app_settings = {
+  app_settings = {                #A map of key-value pairs of App Settings
 
     "APPINSIGHTS_INSTRUMENTATIONKEY"             = azurerm_application_insights.fg-appinsights.instrumentation_key
     "APPINSIGHTS_PROFILERFEATURE_VERSION"        = "1.0.0"
@@ -52,7 +52,7 @@ resource "azurerm_linux_function_app" "backend-fnapp" {
   service_plan_id            = azurerm_service_plan.be-asp.id
 
 
-  app_settings = {
+  app_settings = {               #A map of key-value pairs of App Settings   
 
     "APPINSIGHTS_INSTRUMENTATIONKEY"             = azurerm_application_insights.fg-appinsights.instrumentation_key
     "APPINSIGHTS_PROFILERFEATURE_VERSION"        = "1.0.0"
@@ -69,7 +69,7 @@ resource "azurerm_linux_function_app" "backend-fnapp" {
       name                      = "Frontend access only"
     }
     application_stack {
-      python_version = 3.8
+      python_version = 3.12    # Latest version at the time of creation
     }
   }
 
@@ -87,7 +87,7 @@ resource "azurerm_app_service_virtual_network_swift_connection" "be-vnet-integra
   app_service_id = azurerm_linux_function_app.backend-fnapp.id
   subnet_id      = azurerm_subnet.be-subnet.id
   depends_on = [
-    azurerm_linux_function_app.be-fnapp
+    azurerm_linux_function_app.backend-fnapp
   ]
 }
 
