@@ -1,21 +1,21 @@
 resource "azurerm_service_plan" "frontend-asp" {
-  name                = "fe-asp-prod"
+  name                = "frontend-asp-prod"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   os_type             = "Linux"
   sku_name            = "B1"
   depends_on = [
-    azurerm_subnet.fe-subnet
+    azurerm_subnet.frontend-subnet
   ]
 }
 
 resource "azurerm_service_plan" "backend-asp" {
-  name                = "be-asp-prod"
+  name                = "backend-asp-prod"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   os_type             = "Linux"
   sku_name            = "B1"
   depends_on = [
-    azurerm_subnet.be-subnet
+    azurerm_subnet.backend-subnet
   ]
 }
