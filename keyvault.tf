@@ -58,7 +58,7 @@ resource "azurerm_key_vault_access_policy" "kv_access_policy_web_app" {
 
   depends_on = [
     azurerm_key_vault.fg-keyvault,
-    azurerm_linux_web_app.fe-webapp
+    azurerm_linux_web_app.frontend-webapp
 
   ]
 }
