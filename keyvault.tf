@@ -47,7 +47,7 @@ resource "azurerm_key_vault_access_policy" "kv_access_policy_me" {
 resource "azurerm_key_vault_access_policy" "kv_access_policy_web_app" {
   key_vault_id = azurerm_key_vault.fg-keyvault.id
   tenant_id    = data.azurerm_client_config.current.tenant_id
-  object_id    = azurerm_linux_web_app.fe-webapp.identity[0].principal_id
+  object_id    = azurerm_linux_web_app.frontend-webapp.identity[0].principal_id
 
   key_permissions = ["Get", "List"]
 
