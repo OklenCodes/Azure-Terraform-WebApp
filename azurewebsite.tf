@@ -87,7 +87,7 @@ resource "azurerm_linux_function_app" "backend-fnapp" {
 #vnet integration of backend functions
 resource "azurerm_app_service_virtual_network_swift_connection" "be-vnet-integration" {
   app_service_id = azurerm_linux_function_app.backend-fnapp.id
-  subnet_id      = azurerm_subnet.be-subnet.id
+  subnet_id      = azurerm_subnet.backend-subnet.id
   depends_on = [
     azurerm_linux_function_app.backend-fnapp
   ]
