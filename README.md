@@ -23,4 +23,6 @@ An additional Azure Storage Account is created to store log data, including Key 
 I will also be using VSCode with the Terraform extension and the VSCode terminal. 
 
 # Steps to Set Up
-First within the Azure console I have to create "OklenAzure1" resource group and also create the storage account within that named "oklenstorageaccount"
+First within the Azure console I have to create "OklenAzure1" resource group 
+Within the resource group I also create the storage account named "oklenstorageaccount"
+Within the storage account, I also create a container named "oklencontainer1"
