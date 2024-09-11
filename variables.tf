@@ -3,4 +3,5 @@ variable "resource_group_name" {
 }
 variable "location" {
   description = "Location variable"
+  default     = "UK South"                #Same as TF.VARS
 }
