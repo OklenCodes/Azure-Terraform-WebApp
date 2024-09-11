@@ -5,5 +5,4 @@ resource "azurerm_resource_group" "rg" {
     Enviroment = "Task 1"
     Team       = "Cloud"
   }
-
 }
