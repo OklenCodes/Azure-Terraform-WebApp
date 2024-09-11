@@ -51,7 +51,7 @@ resource "azurerm_linux_function_app" "backend-fnapp" {
 
   storage_account_name       = azurerm_storage_account.fn-storageaccount.name
   storage_account_access_key = azurerm_storage_account.fn-storageaccount.primary_access_key
-  service_plan_id            = azurerm_service_plan.be-asp.id
+  service_plan_id            = azurerm_service_plan.backend-asp.id
 
 #App Settings for Application insight
   app_settings = {               #A map of key-value pairs of App Settings   
