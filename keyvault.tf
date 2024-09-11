@@ -12,7 +12,6 @@ resource "azurerm_key_vault" "fg-keyvault" {
   purge_protection_enabled    = false
   sku_name                    = "standard"
 
-
 }
 
 # this permission is for service connection from app registration, this is given to store database secrets to key vault
@@ -43,25 +42,18 @@ resource "azurerm_key_vault_access_policy" "kv_access_policy_me" {
 }
 
 
-# Grant Key Vault access to the Web App. 
+# Retrieve the managed identity's principal ID (object_id)
 resource "azurerm_key_vault_access_policy" "kv_access_policy_web_app" {
-  key_vault_id = azurerm_key_vault.fg-keyvault.id
-  tenant_id    = data.azurerm_client_config.current.tenant_id
-  object_id    = azurerm_linux_web_app.frontend-webapp.identity[0].principal_id
+  key_vault_id  = azurerm_key_vault.fg-keyvault.id
+  tenant_id     = "31673592-0635-48d1-a494-9887ca994b24"
+  object_id     = azurerm_linux_web_app.frontend-webapp.identity[0].principal_id
 
-  key_permissions = ["Get", "List"]
+  key_permissions    = ["Get", "List", "Update", "Delete"]
+  secret_permissions = ["Get", "List", "Set", "Delete"]
 
-  secret_permissions = [
-    "Get",
-    "List"
-  ]
-
-  depends_on = [
-    azurerm_key_vault.fg-keyvault,
-    azurerm_linux_web_app.frontend-webapp
-
-  ]
+  depends_on = [azurerm_linux_web_app.frontend-webapp]
 }
+
 
 # need to enable the logging for key vault
 # here i used the same storge accout created for function app: azurerm_linux_function_app
