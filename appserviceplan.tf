@@ -3,9 +3,8 @@ resource "azurerm_service_plan" "frontend-asp" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   os_type             = "Linux"
-  sku_name            = "P1v2"   # Premium app service plan sku supports Availability Zones and distrubuted scaling
-  zone_balancing_enabled = true  # Enable zone redundancy
-
+  sku_name            = "S1"   # Premium app service plan sku supports Availability Zones and distrubuted scaling
+  ///zone_balancing_enabled = true  # Enable zone redundancy | This will return an error on free account
 
   depends_on = [
     azurerm_subnet.frontend-subnet
@@ -17,9 +16,8 @@ resource "azurerm_service_plan" "backend-asp" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   os_type             = "Linux"
-  sku_name            = "P1v2"   # Premium app service plan sku supports Availability Zones and distrubuted scaling
-  zone_balancing_enabled = true  # Enable zone redundancy
-
+  sku_name            = "S1"   # Premium app service plan sku supports Availability Zones and distrubuted scaling
+  ///zone_balancing_enabled = true  # Enable zone redundancy | This will return an error on free account
 
   depends_on = [
     azurerm_subnet.backend-subnet
