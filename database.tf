@@ -5,26 +5,13 @@ resource "random_password" "randompassword" {
   override_special = "!#$%&*()-_=+[]{}<>:?"
 }
 
-# Creating Key Vault Secret and access policies 
-resource "azurerm_key_vault_secret" "sqladminpassword" {       #Key Vault created first
-  name         = "sqladmin"
-  value        = random_password.randompassword.result
-  key_vault_id = azurerm_key_vault.fg-keyvault.id
-  content_type = "text/plain"
-  depends_on = [
-    azurerm_mssql_database.fg-database,
-    azurerm_key_vault.fg-keyvault,
-    azurerm_key_vault_access_policy.kv_access_policy_sc,
-    azurerm_key_vault_access_policy.kv_access_policy_me
-  ]
-}
 
 #Azure sql database
 resource "azurerm_mssql_server" "azuresql" {
   name                         = "fg-sqldb-prod"
   resource_group_name          = azurerm_resource_group.rg.name
   location                     = azurerm_resource_group.rg.location
-  version                      = "16.0"
+  version                      = "12.0"                                #Expected versions are "2.0" or "12.0"
   administrator_login          = "UserAdm!n24"
   administrator_login_password = random_password.randompassword.result
 
@@ -38,7 +25,7 @@ resource "azurerm_mssql_server" "azuresql" {
 resource "azurerm_mssql_virtual_network_rule" "allow-be" {
   name      = "be-sql-vnet-rule"
   server_id = azurerm_mssql_server.azuresql.id
-  subnet_id = azurerm_subnet.be-subnet.id
+  subnet_id = azurerm_subnet.backend-subnet.id
   depends_on = [
     azurerm_mssql_server.azuresql
   ]
@@ -59,15 +46,3 @@ resource "azurerm_mssql_database" "fg-database" {
   }
 }
 
-#this is python connection string and it's stored in key vault
-resource "azurerm_key_vault_secret" "sqldb_cnxn" {
-  name         = "fgsqldbconstring"
-  value        = "Driver={ODBC Driver 18 for SQL Server};Server=tcp:fg-sqldb-prod.database.windows.net,1433;Database=fg-db;Uid=4adminu$er;Pwd=${random_password.randompassword.result};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
-  key_vault_id = azurerm_key_vault.fg-keyvault.id
-  depends_on = [
-    azurerm_mssql_database.fg-database,
-    azurerm_key_vault.fg-keyvault,
-    azurerm_key_vault_access_policy.kv_access_policy_sc,
-    azurerm_key_vault_access_policy.kv_access_policy_me
-  ]
-}
