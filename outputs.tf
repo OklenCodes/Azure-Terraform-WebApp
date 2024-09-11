@@ -3,12 +3,12 @@ output "resource_group_id" {
 }
 output "frontend_url" {
 
-  value = "${azurerm_linux_web_app.fe-webapp.name}.azurewebsites.net"
+  value = "${azurerm_linux_web_app.frontend-webapp.name}.azurewebsites.net"
 }
 
 output "backedn_url" {
 
-  value = "${azurerm_linux_function_app.be-fnapp.name}.azurewebsites.net"
+  value = "${azurerm_linux_function_app.backend-fnapp.name}.azurewebsites.net"
 }
 output "instrumentation_key" {
   value     = azurerm_application_insights.fg-appinsights.instrumentation_key
