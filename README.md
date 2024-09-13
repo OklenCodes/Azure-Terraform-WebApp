@@ -45,9 +45,9 @@ This file creates an Azure Virtual Network and subnets for the frontend and back
 
 
 # Steps to Set Up
-First within the Azure console I have to create "OklenAzure1" resource group 
-Within the resource group I also create the storage account named "oklenstorageaccount"
-Within the storage account, I also create a container named "oklencontainer1"
+
+
+Youtube walkthrough - 
 
 
 # Next steps
