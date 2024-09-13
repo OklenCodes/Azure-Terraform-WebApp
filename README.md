@@ -45,8 +45,6 @@ This file creates an Azure Virtual Network and subnets for the frontend and back
 
 
 # Steps to Set Up
-To set up and use this Terraform environment, follow these steps:
-
 Clone the repository to your local machine using the command:
 git clone <repository-url>.
 
