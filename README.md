@@ -45,6 +45,30 @@ This file creates an Azure Virtual Network and subnets for the frontend and back
 
 
 # Steps to Set Up
+To set up and use this Terraform environment, follow these steps:
+
+Clone the repository to your local machine using the command:
+git clone <repository-url>.
+
+Install Terraform if it's not already installed. You can download Terraform from the official Terraform website.
+
+Set up Azure CLI and log in to your Azure account using:
+az login.
+
+Configure the environment by modifying the config.tfvars file with your own values for location and resource group.
+
+Initialize the environment by navigating to the project directory and running:
+terraform init.
+This will download the necessary provider plugins and prepare your environment.
+
+Apply the configuration to provision the resources:
+terraform apply -var-file=config.tfvars.
+Confirm the action, and Terraform will start creating the resources in your Azure subscription.
+
+Once the deployment is complete, review the outputs provided by Terraform, such as URLs for the frontend and backend apps, and other key infrastructure information.
+
+You are now ready to start using the environment!
+
 
 
 Youtube walkthrough - 
