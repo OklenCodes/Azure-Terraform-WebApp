@@ -46,7 +46,7 @@ This file creates an Azure Virtual Network and subnets for the frontend and back
 
 # Steps to Set Up
 Clone the repository to your local machine using the command:
-git clone <repository-url>.
+git clone <(https://github.com/OklenCodes/Azure-Terraform-WebApp.git)>.
 
 Install Terraform if it's not already installed. You can download Terraform from the official Terraform website.
 
