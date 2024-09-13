@@ -18,7 +18,9 @@ This includes the azure frontend and backend service plan. Both service plans us
 Currently configured for standard sku in the free tier of Azure. 
 Configuration for premium account that will utilise availability zone and dostrubuted scaling is also available when uncommented.  
 
-[azurewebsite.tf]
+[azurewebsite.tf](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main/azurewebsite.tf) - 
+Frontend website of the web app detailing 
+
 [config.tfvars]
 [database.tf]
 [keyvault.tf]
