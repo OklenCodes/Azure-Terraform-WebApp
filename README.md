@@ -7,6 +7,8 @@ Azure Storage Account will is used for state storage.
 Application Insights is used for monitoring. 
 
 # Explaining the Terraform Files
+An additional Azure Storage Account is created to store log data, including Key Vault diagnostic log data. 
+I will also be using VSCode with the Terraform extension and the VSCode terminal. 
 
 [Provider](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main/provider.tf) - 
 Hashcorp minimum version 4.0.1. 
@@ -45,9 +47,6 @@ This file declares variables used across other Terraform files, such as the reso
 [vnet.tf](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main/vnet.tf)
 This file creates an Azure Virtual Network and subnets for the frontend and backend. The subnets are configured with service endpoints, allowing secure communication between web services and the SQL database. Delegations for each subnet are defined to manage which services can connect to the subnets.
 
-
-An additional Azure Storage Account is created to store log data, including Key Vault diagnostic log data. 
-I will also be using VSCode with the Terraform extension and the VSCode terminal. 
 
 # Steps to Set Up
 First within the Azure console I have to create "OklenAzure1" resource group 
