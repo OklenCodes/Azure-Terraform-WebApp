@@ -13,7 +13,13 @@ Hashcorp minimum version 4.0.1.
 Storing the statefile which includes name, location, account tier and account replication. 
 Azure storage container, name, storage account name and container access type.
 
-[appserviceplan.tf]
+[appserviceplan.tf](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main/appserviceplan.tf) -
+This includes the azure frontend and backend service plan. Both service plans use identical operating system, location and subnet. 
+
+Currently configured for standard sku in the free tier of Azure. 
+
+Configuration for premium account that will utilise availability zone and dostrubuted scaling is also available when uncommented.  
+
 [azurewebsite.tf]
 [config.tfvars]
 [database.tf]
