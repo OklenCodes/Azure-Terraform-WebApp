@@ -8,7 +8,7 @@ Application Insights is used for monitoring.
 
 # Explaining the Terraform Codes
 
-Provider - 
+[Provider] (https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main/provider.tf) - Hashcorp minimum version 4.0.1
 
 
 
