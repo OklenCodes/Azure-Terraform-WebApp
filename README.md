@@ -6,7 +6,7 @@ Azure Key Vault will be used for secrets management.
 Azure Storage Account will is used for state storage. 
 Application Insights is used for monitoring. 
 
-# Explaining the Terraform Codes
+# Explaining the Terraform Files
 
 [Provider](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main/provider.tf) - 
 Hashcorp minimum version 4.0.1. 
