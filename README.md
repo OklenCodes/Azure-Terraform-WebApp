@@ -8,7 +8,21 @@ Application Insights is used for monitoring.
 
 # Explaining the Terraform Codes
 
-[Provider](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main/provider.tf) - Hashcorp minimum version 4.0.1
+[Provider](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main/provider.tf) - 
+Hashcorp minimum version 4.0.1. 
+Storing the statefile which includes name, location, account tier and account replication. 
+Azure storage container, name, storage account name and container access type.
+
+[appserviceplan.tf]
+[azurewebsite.tf]
+[config.tfvars]
+[database.tf]
+[keyvault.tf]
+[logging.tf]
+[main.tf]
+[outputs.tf]
+[variables.tf]
+[vnet.tf]
 
 
 
