@@ -12,7 +12,7 @@ Provider -
 
 
 
-# Things to consider
+# Next steps
 Looking to explore Azure App Service autoscaling plans to automatically adjust resource allocation based on traffic.
 Looking to Implement Azure Application Gateway or Load Balancer to distribute traffic across multiple instances of my app services.
 Consider deploying your app services across different availability zones for redundancy.
