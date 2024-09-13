@@ -1,10 +1,6 @@
 # Azure-Terraform-WebApp
 
-Trying to build 3 tier scalable and cost efficient web app in Azure with terraform
-
-Azure Key Vault will be used for secrets management. 
-Azure Storage Account will is used for state storage. 
-Application Insights is used for monitoring. 
+Building a 3 tier scalable and cost efficient web app in Azure with terraform.
 
 # Explaining the Terraform Files
 An additional Azure Storage Account is created to store log data, including Key Vault diagnostic log data. 
