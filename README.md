@@ -3,7 +3,7 @@
 Building a 3 tier scalable and cost efficient web app in Azure with terraform.
 
 <video width="600" controls>
-  <source src="./assets/singlearchi.mov" type="video/mp4">
+  <source src="./assets/Single archi.mp4" type="video/mp4">
   Testing in browser.
 </video>
 
