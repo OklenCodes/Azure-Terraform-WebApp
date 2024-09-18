@@ -4,6 +4,11 @@ Building a 3 tier scalable and cost efficient web app in Azure with terraform.
 
 ![test](./assets/singlearchi.mov)
 
+<video width="600" controls>
+  <source src="./assets/singlearchi.mov" type="video/mp4">
+  Testing in browser.
+</video>
+
 # Explaining the Terraform Files
 An additional Azure Storage Account is created to store log data, including Key Vault diagnostic log data. 
 I will also be using VSCode with the Terraform extension and the VSCode terminal. 
