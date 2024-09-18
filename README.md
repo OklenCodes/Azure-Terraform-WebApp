@@ -2,6 +2,8 @@
 
 Building a 3 tier scalable and cost efficient web app in Azure with terraform.
 
+https://github.com/user-attachments/assets/5964c0c1-11a8-43ce-8b7f-db94e1782c96
+
 # Explaining the Terraform Files
 An additional Azure Storage Account is created to store log data, including Key Vault diagnostic log data. 
 I will also be using VSCode with the Terraform extension and the VSCode terminal. 
