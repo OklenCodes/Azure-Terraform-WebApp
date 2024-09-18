@@ -2,7 +2,7 @@
 
 Building a 3 tier scalable and cost efficient web app in Azure with terraform.
 
-![](./assets/Single archi.mp4)
+![] (./assets/Single archi.mp4)
 
 
 # Explaining the Terraform Files
