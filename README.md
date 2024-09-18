@@ -2,8 +2,7 @@
 
 Building a 3 tier scalable and cost efficient web app in Azure with terraform.
 
-![] (./assets/Single archi.mp4)
-
+![Description of GIF](./assets/singlearchi.mp4)
 
 # Explaining the Terraform Files
 An additional Azure Storage Account is created to store log data, including Key Vault diagnostic log data. 
