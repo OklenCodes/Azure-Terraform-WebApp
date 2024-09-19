@@ -26,5 +26,5 @@ resource "azurerm_storage_container" "state" {
 provider "azurerm" {
   features {}
 
-  subscription_id = "2aa9990f-7dbb-42de-8598-4164d715d5e8"  # Hide this as good practise
+  subscription_id = 
 }
