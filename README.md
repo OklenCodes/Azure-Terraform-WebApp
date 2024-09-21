@@ -75,9 +75,9 @@ You are now ready to start using the environment!
 Youtube walkthrough - 
 
 
-# Next steps
-Looking to explore Azure App Service autoscaling plans to automatically adjust resource allocation based on traffic.
+## To-do List
 
-Looking to Implement Azure Application Gateway or Load Balancer to distribute traffic across multiple instances of my app services.
+- [ ] Look to implement Azure Application Gateway
+- [ ] Utilise Azure SQL Database geo-replication for disaster recovery
+- [ ] 
 
-For the database, explore Azure SQL Database geo-replication for disaster recovery.
