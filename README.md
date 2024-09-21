@@ -5,7 +5,7 @@ Building a 3 tier scalable and cost efficient web app in Azure with terraform.
 
 ![](./assets/architecture.gif)
 
-# Explaining the Terraform Files
+## Terraform files explained in detail
 An additional Azure Storage Account is created to store log data, including Key Vault diagnostic log data. 
 I will also be using VSCode with the Terraform extension and the VSCode terminal. 
 
@@ -25,7 +25,6 @@ This file defines two primary resources: the frontend Linux web app and the back
 
 [database.tf](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main//Terraform%20Files/database.tf)
 This file manages an Azure SQL Server and database. A random complex password is generated to ensure security. Additionally, a virtual network rule is created to restrict access to the backend subnet only. The file also creates a SQL database and defines its parameters, including size, collation, and environment tags.
-
 
 [keyvault.tf](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main//Terraform%20Files/keyvault.tf)
 This file provisions an Azure Key Vault, enabling disk encryption and setting retention policies for deleted secrets. It configures access policies, granting specific users and applications permissions to access keys and secrets. Additionally, Key Vault logging is enabled using Azure Monitor Diagnostic Settings.
