@@ -14,14 +14,14 @@ I will also be using VSCode with the Terraform extension and the VSCode terminal
     Hashcorp minimum version 4.0.1. 
     This file defines the Azure provider required for this project, using the azurerm provider version 4.0.1. It provisions a storage account and container to securely store Terraform's state file, ensuring that infrastructure changes are tracked. Additionally, the provider configuration includes a subscription ID, allowing Terraform to interact with Azure     resources under the correct account.
 
-      - [appserviceplan.tf](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main/Terraform%20Files/appserviceplan.tf) -
+   - [appserviceplan.tf](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main/Terraform%20Files/appserviceplan.tf) -
       appserviceplan.tf
       This file configures two separate Azure App Service Plans: one for the frontend and one for the backend. Both plans use a Linux OS and the "S1" SKU, which supports Availability Zones for scaling and redundancy. Dependencies are set to ensure that the app service plans are created only after the required subnets are provisioned.
     
-      - [azurewebsite.tf](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main//Terraform%20Files/azurewebsite.tf) - 
+    - [azurewebsite.tf](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main//Terraform%20Files/azurewebsite.tf) - 
       This file defines two primary resources: the frontend Linux web app and the backend Function App. The web app uses Node.js (version 20 LTS) and is secured by HTTPS-only traffic. It is also linked to Application Insights for monitoring. The backend Function App, built in Python (version 3.12), is secured by Virtual Network integration and restricts access to the   frontend subnet. Both apps use system-assigned identities to access other Azure resources.
     
-      - [config.tfvars](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main//Terraform%20Files/config.tfvars)
+     - [config.tfvars](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main//Terraform%20Files/config.tfvars)
       This file defines two primary resources: the frontend Linux web app and the backend Function App. The web app uses Node.js (version 20 LTS) and is secured by HTTPS-only traffic. It is also linked to Application Insights for monitoring. The backend Function App, built in Python (version 3.12), is secured by Virtual Network integration and restricts access to the   frontend subnet. Both apps use system-assigned identities to access other Azure resources.
     
       - [database.tf](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main//Terraform%20Files/database.tf)
