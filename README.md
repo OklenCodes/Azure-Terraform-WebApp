@@ -79,5 +79,4 @@ Youtube walkthrough -
 
 - [ ] Look to implement Azure Application Gateway
 - [ ] Utilise Azure SQL Database geo-replication for disaster recovery
-- [ ] 
 
