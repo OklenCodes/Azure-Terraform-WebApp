@@ -50,12 +50,12 @@ I will also be using VSCode with the Terraform extension and the VSCode terminal
 ## Steps to Set Up
 Clone the repository
 
- - Install Terraform if it's not already installed. You can download Terraform from the official Terraform website.
+ > Install Terraform if it's not already installed. You can download Terraform from the official Terraform website.
 
 Set up Azure CLI and log in to your Azure account using:
- - az login.
+ > az login.
 
- - Configure the environment by modifying the config.tfvars file with your own values for location and resource group.
+ > Configure the environment by modifying the config.tfvars file with your own values for location and resource group.
 
 Initialize the environment by navigating to the project directory and running:
  - terraform init.
