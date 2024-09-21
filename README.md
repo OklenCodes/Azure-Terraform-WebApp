@@ -47,7 +47,7 @@ I will also be using VSCode with the Terraform extension and the VSCode terminal
       This file creates an Azure Virtual Network and subnets for the frontend and backend. The subnets are configured with service endpoints, allowing secure communication between web services and the SQL database. Delegations for each subnet are defined to manage which services can connect to the subnets.
 
 
-# Steps to Set Up
+## Steps to Set Up
 Clone the repository to your local machine using the command:
 git clone https://github.com/OklenCodes/Azure-Terraform-WebApp.git
 
@@ -69,6 +69,8 @@ Confirm the action, and Terraform will start creating the resources in your Azur
 Once the deployment is complete, review the outputs provided by Terraform, such as URLs for the frontend and backend apps, and other key infrastructure information.
 
 You are now ready to start using the environment!
+
+**IMPORTANT**: Destroy the resources after you finish because it will get pricy very fast.
 
 
 
