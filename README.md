@@ -63,6 +63,7 @@ This will download the necessary provider plugins and prepare your environment.
 
 Apply the configuration to provision the resources:
  > terraform apply -var-file=config.tfvars.
+
 Confirm the action, and Terraform will start creating the resources in your Azure subscription.
 
 Once the deployment is complete, review the outputs provided by Terraform, such as URLs for the frontend and backend apps, and other key infrastructure information.
