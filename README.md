@@ -72,7 +72,8 @@ You are now ready to start using the environment!
 **IMPORTANT**: Destroy the resources after you finish because it will get pricy very fast.
 
 
-Youtube walkthrough - 
+## Youtube walkthrough
+https://youtu.be/tq6S8BRlgkk
 
 
 ## To-do List
