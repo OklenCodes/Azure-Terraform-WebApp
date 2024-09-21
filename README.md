@@ -1,5 +1,6 @@
-# Azure-Terraform-WebApp
+# Building a 3 Tier Webapp within Azure on Terraform
 
+## Project Structure
 Building a 3 tier scalable and cost efficient web app in Azure with terraform.
 
 ![](./assets/architecture.gif)
