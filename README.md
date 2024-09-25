@@ -18,9 +18,7 @@ This is then sent to log analytics to raise to raise any alerts if necessary. Th
 
 ## Terraform files Explained in Detail
 
-**Provider**: 
-
-    - [Provider](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main/Terraform%20Files/provider.tf) - 
+**Provider**: - [Provider](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main/Terraform%20Files/provider.tf) - 
     Hashcorp minimum version 4.0.1. 
     This file defines the Azure provider required for this project, using the azurerm provider version 4.0.1. It provisions a storage account and container to securely store Terraform's state file, ensuring that infrastructure changes are tracked. Additionally, the provider configuration includes a subscription ID, allowing Terraform to interact with Azure     
     resources under the correct account.
