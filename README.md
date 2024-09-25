@@ -17,8 +17,6 @@ This is then sent to log analytics to raise to raise any alerts if necessary. Th
 
 
 ## Terraform files Explained in Detail
-An additional Azure Storage Account is created to store log data, including Key Vault diagnostic log data. 
-I will also be using VSCode with the Terraform extension and the VSCode terminal. 
 
 **Provider**: 
     - [Provider](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main/Terraform%20Files/provider.tf) - 
