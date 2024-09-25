@@ -1,7 +1,9 @@
 # Building a 3 Tier Webapp within Azure on Terraform
 
-## architectural overiview
-Building a 3 tier scalable and cost efficient web app in Azure with terraform.
+## Architectural overiview
+The architecture comprises of a Azure resource group which includes Azure Key vault which manages access to the front end web applications and storage account. 2 Service plans, 1 for frontend and another for backend. These establish the frontend and backend Linux applications that also connect to a load balancer to ensure the traffic is manageable and maintainable.
+Also included is a virtual network to encompass and secure the applications and storage accounts, which additional subnets to for each app. In addition there is a storage account for the information from the backend applications. Plus Application insights to monitor the activity from both Frontend and Backend apps. This is then sent to log analytics to raise to raise any alerts if necessary. These are also sent to Azure SQL to for safe storage.
+
 
 ![](./assets/architecture.gif)
 
