@@ -78,7 +78,7 @@ You are now ready to start using the environment!
 
 
 ## Youtube walkthrough
-https://youtu.be/tq6S8BRlgkk
+
 
 
 ## To-do List
