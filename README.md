@@ -1,6 +1,6 @@
 # Building a 3 Tier Webapp within Azure on Terraform
 
-## Architectural overiview
+## architectural overiview
 Building a 3 tier scalable and cost efficient web app in Azure with terraform.
 
 ![](./assets/architecture.gif)
