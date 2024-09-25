@@ -6,6 +6,14 @@ Building a 3 tier scalable and cost efficient web app in Azure with terraform.
 ![](./assets/architecture.gif)
 
 ## Objective
+This project aims to design and implement a secure, scalable multi-tier application that focuses on security and availability.
+
+Availability: Deployed in seperate availbility zones to reduce redundancy and enbale fault tolerance.
+Security: Specific segmentation of the network into separate subnets and implementation of Network Security Groups (NSGs) to control traffic flow.
+Scalability: Deployment of Virtual Machine Scale Set (VMSS) to handle varying levels of web traffic.
+Resiliency: Use Azure Load Balancer to distribute incoming traffic and ensure high availability.
+Management: Implementation of Azure Bastion Host to securely manage Virtual Machines (VMs) within the network.
+
 
 ## Technologies Explained in Detail
 An additional Azure Storage Account is created to store log data, including Key Vault diagnostic log data. 
