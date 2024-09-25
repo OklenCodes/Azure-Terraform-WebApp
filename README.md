@@ -80,7 +80,7 @@ Confirm the action, and Terraform will start creating the resources in your Azur
 Once the deployment is complete, review the outputs provided by Terraform, such as URLs for the frontend and backend apps, and other key infrastructure information.
 You are now ready to start using the environment!
 
-**IMPORTANT**: Destroy the resources after you finish because it will get pricy very fast.
+**IMPORTANT**: Destroy the resources after you finish because you do not want to pay extra for resources you are not actively using.
 
 
 ## Youtube walkthrough
