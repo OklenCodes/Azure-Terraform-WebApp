@@ -1,12 +1,5 @@
 # Building a 3 Tier Webapp within Azure on Terraform
 
-## Architectural overiview
-The architecture comprises of a Azure resource group which includes Azure Key vault which manages access to the front end web applications and storage account. 2 Service plans, 1 for frontend and another for backend. These establish the frontend and backend Linux applications that also connect to a load balancer to ensure the traffic is manageable and maintainable.
-Also included is a virtual network to encompass and secure the applications and storage accounts, which additional subnets to for each app. In addition there is a storage account for the information from the backend applications. Plus Application insights to monitor the activity from both Frontend and Backend apps. This is then sent to log analytics to raise to raise any alerts if necessary. These are also sent to Azure SQL to for safe storage.
-
-
-![](./assets/architecture.gif)
-
 ## Objective
 This project aims to design and implement a secure, scalable multi-tier application that focuses on security and availability.
 
@@ -14,6 +7,13 @@ This project aims to design and implement a secure, scalable multi-tier applicat
 - Security: Specific segmentation of the network into separate subnets to help control traffic flow.
 - Resiliency: Use Azure Load Balancer to distribute incoming traffic and ensure high availability.
 - Management: Implementation of Azure Key Vault to securely manage access to database and storage account.
+
+## Architectural overiview
+The architecture comprises of 2 Service plans, 1 for frontend and another for backend, these also connect to a load balancer to ensure the traffic is manageable and maintainable. In addition, a virtual network to encompass and secure the applications and storage accounts, which additional subnets to for each app. Also the storage account for the information from the backend applications and Application insights to monitor the activity from both Frontend and Backend apps. 
+This is then sent to log analytics to raise to raise any alerts if necessary. These are also sent to Azure SQL to for safe storage.
+
+
+![](./assets/architecture.gif)
 
 
 ## Technologies Explained in Detail
