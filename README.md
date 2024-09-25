@@ -19,14 +19,10 @@ This is then sent to log analytics to raise to raise any alerts if necessary. Th
 ## Terraform files Explained in Detail
 
 **Provider**: - [Provider](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main/Terraform%20Files/provider.tf) - 
-    Hashcorp minimum version 4.0.1. 
-    This file defines the Azure provider required for this project, using the azurerm provider version 4.0.1. It provisions a storage account and container to securely store Terraform's state file, ensuring that infrastructure changes are tracked. Additionally, the provider configuration includes a subscription ID, allowing Terraform to interact with Azure     
-    resources under the correct account.
+    Hashcorp minimum version 4.0.1. This file defines the Azure provider required for this project, using the azurerm provider version 4.0.1. It provisions a storage account and container to securely store Terraform's state file, ensuring that infrastructure changes are tracked. Additionally, the provider configuration includes a subscription ID, allowing Terraform to interact with Azure     
+resources under the correct account.
 
-**AppServicePlan**
-
-   - [appserviceplan.tf](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main/Terraform%20Files/appserviceplan.tf) -
-      appserviceplan.tf
+**AppServicePlan** -[appserviceplan.tf](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main/Terraform%20Files/appserviceplan.tf) - 
       This file configures two separate Azure App Service Plans: one for the frontend and one for the backend. Both plans use a Linux OS and the "S1" SKU, which supports Availability Zones for scaling and redundancy. Dependencies are set to ensure that the app service plans are created only after the required subnets are provisioned.
 
 **AzureWebsite**
