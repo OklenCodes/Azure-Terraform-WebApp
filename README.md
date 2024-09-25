@@ -8,10 +8,10 @@ Building a 3 tier scalable and cost efficient web app in Azure with terraform.
 ## Objective
 This project aims to design and implement a secure, scalable multi-tier application that focuses on security and availability.
 
-Availability: Deployed in seperate availbility zones to reduce redundancy and enbale fault tolerance.
-Security: Specific segmentation of the network into separate subnets to help control traffic flow.
-Resiliency: Use Azure Load Balancer to distribute incoming traffic and ensure high availability.
-Management: Implementation of Azure Key Vault to securely manage access to database and storage account.
+- Availability: Deployed in seperate availbility zones to reduce redundancy and enbale fault tolerance.
+- Security: Specific segmentation of the network into separate subnets to help control traffic flow.
+- Resiliency: Use Azure Load Balancer to distribute incoming traffic and ensure high availability.
+- Management: Implementation of Azure Key Vault to securely manage access to database and storage account.
 
 
 ## Technologies Explained in Detail
