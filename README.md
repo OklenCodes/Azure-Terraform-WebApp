@@ -16,11 +16,12 @@ This is then sent to log analytics to raise to raise any alerts if necessary. Th
 ![](./assets/architecture.gif)
 
 
-## Technologies Explained in Detail
+## Terraform files Explained in Detail
 An additional Azure Storage Account is created to store log data, including Key Vault diagnostic log data. 
 I will also be using VSCode with the Terraform extension and the VSCode terminal. 
 
-1. **Terraform (IaC)**: To deploy Azure Infrastructure resources using Terraform modules.
+**Provider**: 
+
     - [Provider](https://github.com/OklenCodes/Azure-Terraform-WebApp/blob/main/Terraform%20Files/provider.tf) - 
     Hashcorp minimum version 4.0.1. 
     This file defines the Azure provider required for this project, using the azurerm provider version 4.0.1. It provisions a storage account and container to securely store Terraform's state file, ensuring that infrastructure changes are tracked. Additionally, the provider configuration includes a subscription ID, allowing Terraform to interact with Azure     resources under the correct account.
